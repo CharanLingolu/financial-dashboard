@@ -34,6 +34,6 @@ This project was built to demonstrate proficiency in modern frontend architectur
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/CharanLingolu/financial-dashboard
    cd finance-dashboard
    ```
