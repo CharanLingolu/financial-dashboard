@@ -2,7 +2,7 @@
 
 AuraFlow is a premium, responsive financial dashboard built to demonstrate proficiency in modern frontend architecture, global state management, and high-quality UI/UX design.
 
-**[🌐 Live Demo Link Here]**
+🌐 Live Demo Link: https://auraflow-dashboard.vercel.app/
 
 ## 🚀 Tech Stack
 
