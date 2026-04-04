@@ -39,8 +39,8 @@ const Layout = ({ children, currentView, setCurrentView }) => {
         }`}
       >
         <div className="flex justify-between items-center p-6">
-          <h2 className="text-2xl font-bold text-blue-600 flex items-center gap-2">
-            <PieChart /> FinDash
+          <h2 className="text-2xl font-bold text-indigo-600 flex items-center gap-2">
+            <PieChart /> AuraFlow
           </h2>
 
           <button

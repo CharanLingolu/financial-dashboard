@@ -1,39 +1,37 @@
-# 📊 Finance Dashboard UI
+# 💜 AuraFlow | Personal Finance Dashboard
 
-A modern, responsive, and interactive financial dashboard built for tracking transactions, analyzing spending habits, and managing financial data.
+AuraFlow is a premium, responsive financial dashboard built to demonstrate proficiency in modern frontend architecture, global state management, and high-quality UI/UX design.
 
-This project was built to demonstrate proficiency in modern frontend architecture, global state management, and UI/UX best practices.
+**[🌐 Live Demo Link Here]**
 
 ## 🚀 Tech Stack
 
-- **Framework:** React 18 (via Vite for lightning-fast HMR)
-- **Styling:** Tailwind CSS (with native Dark Mode support)
-- **State Management:** Zustand (with LocalStorage persistence)
-- **Data Visualization:** Recharts
+- **Framework:** React 18 + Vite
+- **Styling:** Tailwind CSS (Custom Dark Mode & Transitions)
+- **State:** Zustand (with LocalStorage Persistence)
+- **Charts:** Recharts
 - **Icons:** Lucide React
 
 ## ✨ Key Features
 
-### Core Requirements Fulfilled
+### Core Requirements
 
-- **Dashboard Overview:** Dynamic calculation of Total Balance, Income, and Expenses. Includes a time-based Line Chart and a categorical Pie/Donut chart.
-- **Transactions Manager:** A complete table view with search, advanced filtering (by type and category), and multi-criteria sorting.
-- **Role-Based Access Control (RBAC):** Simulated UI roles. "Admins" can add/delete transactions and export data. "Viewers" are restricted to read-only access.
-- **Smart Insights:** Auto-calculates the highest spending category, largest single expense, and overall activity summary.
-- **Responsive Layout:** A fully responsive CSS grid/flexbox layout with a mobile-first slide-out "hamburger" sidebar.
+- **Dynamic Dashboard:** Real-time calculation of Balance, Income, and Expenses with synchronized data visualization.
+- **Advanced Transaction Manager:** A high-performance table featuring internal scrolling, multi-criteria sorting, and category-based filtering.
+- **Role-Based Access (RBAC):** Simulated Admin/Viewer roles. Admins have full CRUD and Export capabilities.
+- **Smart Financial Insights:** Automated analysis of top spending categories and largest single-expense tracking.
 
-### Optional Enhancements Added
+### Premium Enhancements
 
-- **🌙 Dark Mode:** Seamless, full-app dark mode using Tailwind's custom variant handling.
-- **💾 Data Persistence:** Zustand `persist` middleware ensures data survives browser refreshes.
-- **⏳ Mock API Integration:** Asynchronous `setTimeout` promises simulate server latency with beautiful UI loading states and disabled buttons to prevent double-submissions.
-- **📥 Export Functionality:** One-click generation and downloading of a `.csv` file containing all filtered transaction data.
-- **🎨 Animations:** Smooth CSS transitions for page loads, hover states, and modal popups.
+- **🌙 "Equinox" Dark Mode:** A custom-tuned dark theme with smooth 500ms transitions and theme-aware UI components (dropdowns/inputs).
+- **⏳ Mock API Integration:** Simulated server latency using Async/Await Promises to demonstrate professional loading states and submission handling.
+- **📥 Smart Export:** Generates sequential, Excel-optimized CSV reports for financial auditing.
+- **📱 Mobile-First Design:** A fully responsive layout with a slide-out navigation drawer for smaller screens.
 
 ## 🛠️ Setup & Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/CharanLingolu/financial-dashboard
+   git clone https://github.com/CharanLingolu/auraflow-dashboard
    cd finance-dashboard
    ```
