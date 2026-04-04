@@ -33,5 +33,4 @@ AuraFlow is a premium, responsive financial dashboard built to demonstrate profi
 1. **Clone the repository**
    ```bash
    git clone https://github.com/CharanLingolu/auraflow-dashboard
-   cd finance-dashboard
    ```
