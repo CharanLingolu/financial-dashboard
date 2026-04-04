@@ -29,7 +29,6 @@ const Insights = () => {
         )
       : null;
 
-  // --- NEW: EMPTY STATE CHECK ---
   if (transactions.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center flex-1 min-h-[400px] bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8 text-center transition-colors">
@@ -62,7 +61,6 @@ const Insights = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Insight 1 */}
         <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 transition-colors">
           <div className="p-3 bg-orange-50 dark:bg-orange-900/30 rounded-lg text-orange-600 dark:text-orange-400 shrink-0">
             <TrendingDown size={24} />
@@ -84,7 +82,6 @@ const Insights = () => {
           </div>
         </div>
 
-        {/* Insight 2 */}
         <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 transition-colors">
           <div className="p-3 bg-red-50 dark:bg-red-900/30 rounded-lg text-red-600 dark:text-red-400 shrink-0">
             <AlertCircle size={24} />
@@ -114,7 +111,6 @@ const Insights = () => {
           </div>
         </div>
 
-        {/* Insight 3 */}
         <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 md:col-span-2 transition-colors">
           <div className="p-3 bg-green-50 dark:bg-green-900/30 rounded-lg text-green-600 dark:text-green-400 shrink-0">
             <Award size={24} />

@@ -9,7 +9,6 @@ function App() {
   const [currentView, setCurrentView] = useState("dashboard");
   const { theme } = useStore();
 
-  // NEW: Ensure dark mode is applied if the user refreshes the page
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -18,8 +17,6 @@ function App() {
 
   return (
     <Layout currentView={currentView} setCurrentView={setCurrentView}>
-      {/* NEW: We wrap the pages in a div with a unique key. 
-          When the key changes, React replays the animation! */}
       <div key={currentView} className="animate-fade-in">
         {currentView === "dashboard" && <Dashboard />}
         {currentView === "transactions" && <Transactions />}

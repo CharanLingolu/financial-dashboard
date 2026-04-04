@@ -9,7 +9,6 @@ const useStore = create(
       role: "viewer",
       theme: "light",
 
-      // NEW: Add an isLoading state
       isLoading: false,
 
       setRole: (newRole) => set({ role: newRole }),
@@ -25,20 +24,17 @@ const useStore = create(
           return { theme: newTheme };
         }),
 
-      // MOCK API: Simulate a server delay when adding data
       addTransaction: async (newTx) => {
-        set({ isLoading: true }); // 1. Turn on loading state
+        set({ isLoading: true });
 
-        // 2. Fake a network delay of 800 milliseconds
         await new Promise((resolve) => setTimeout(resolve, 800));
 
         set((state) => ({
           transactions: [newTx, ...state.transactions],
-          isLoading: false, // 3. Turn off loading state
+          isLoading: false,
         }));
       },
 
-      // MOCK API: Simulate a server delay when deleting data
       deleteTransaction: async (id) => {
         set({ isLoading: true });
 

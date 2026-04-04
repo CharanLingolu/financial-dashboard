@@ -17,10 +17,8 @@ const Layout = ({ children, currentView, setCurrentView }) => {
   const { role, setRole, theme, toggleTheme } = useStore();
   const [isRoleMenuOpen, setIsRoleMenuOpen] = useState(false);
 
-  // NEW: State to control the mobile sidebar
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Helper to switch pages and close the mobile menu at the same time
   const handleNav = (view) => {
     setCurrentView(view);
     setIsMobileMenuOpen(false);
@@ -28,7 +26,6 @@ const Layout = ({ children, currentView, setCurrentView }) => {
 
   return (
     <div className="flex h-screen transition-colors bg-gray-100 dark:bg-gray-900 overflow-hidden relative">
-      {/* NEW: Dark overlay background for mobile when menu is open */}
       {isMobileMenuOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-20 md:hidden backdrop-blur-sm transition-opacity"
@@ -36,7 +33,6 @@ const Layout = ({ children, currentView, setCurrentView }) => {
         />
       )}
 
-      {/* UPDATED SIDEBAR: Slides in on mobile, static on desktop */}
       <aside
         className={`fixed inset-y-0 left-0 w-64 shadow-xl z-30 bg-white dark:bg-gray-800 dark:border-r dark:border-gray-700 transform transition-transform duration-300 ease-in-out md:relative md:translate-x-0 ${
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
@@ -46,7 +42,7 @@ const Layout = ({ children, currentView, setCurrentView }) => {
           <h2 className="text-2xl font-bold text-blue-600 flex items-center gap-2">
             <PieChart /> FinDash
           </h2>
-          {/* Close button for mobile */}
+
           <button
             className="md:hidden text-gray-500 dark:text-gray-400"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -89,11 +85,9 @@ const Layout = ({ children, currentView, setCurrentView }) => {
         </nav>
       </aside>
 
-      {/* Main Content Area */}
       <div className="flex-1 flex flex-col w-full overflow-hidden min-w-0">
         <header className="flex justify-between items-center p-4 md:p-6 bg-white dark:bg-gray-800 shadow-sm z-10 transition-colors">
           <div className="flex items-center gap-3">
-            {/* NEW: Hamburger Button for mobile */}
             <button
               className="md:hidden p-2 -ml-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
               onClick={() => setIsMobileMenuOpen(true)}
@@ -170,7 +164,6 @@ const Layout = ({ children, currentView, setCurrentView }) => {
           </div>
         </header>
 
-        {/* UPDATED: Added flex and flex-col so child pages can stretch to the bottom */}
         <main className="flex-1 overflow-x-hidden overflow-y-auto p-4 md:p-6 flex flex-col">
           {children}
         </main>

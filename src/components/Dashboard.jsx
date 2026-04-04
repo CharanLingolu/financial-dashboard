@@ -45,7 +45,6 @@ const Dashboard = () => {
 
   return (
     <div className="space-y-6 flex flex-col h-full">
-      {/* SUMMARY CARDS ROW */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 shrink-0">
         <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 transition-colors">
           <div className="flex justify-between items-start">
@@ -96,7 +95,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* CHARTS OR EMPTY STATE */}
       {transactions.length === 0 ? (
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex-1 flex flex-col items-center justify-center p-10 text-center transition-colors min-h-[300px]">
           <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">

@@ -4,7 +4,6 @@ import useStore from "../store/useStore";
 import { X } from "lucide-react";
 
 const TransactionModal = ({ isOpen, onClose }) => {
-  // 1. We pull isLoading from the global store
   const { addTransaction, isLoading } = useStore();
 
   const [formData, setFormData] = useState({
@@ -17,7 +16,6 @@ const TransactionModal = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
 
-  // 2. We make this function 'async' so it can wait for our fake server
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newTx = {
@@ -29,10 +27,8 @@ const TransactionModal = ({ isOpen, onClose }) => {
       type: formData.type,
     };
 
-    // 3. We 'await' the transaction to finish processing
     await addTransaction(newTx);
 
-    // 4. Reset form and close modal ONLY after it finishes saving
     setFormData({
       description: "",
       amount: "",
@@ -46,7 +42,6 @@ const TransactionModal = ({ isOpen, onClose }) => {
   return createPortal(
     <div className="fixed inset-0 bg-gray-900/40 backdrop-blur-sm flex justify-center items-center z-[100] p-4 transition-all">
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl w-full max-w-md overflow-hidden border border-transparent dark:border-gray-700 transition-colors">
-        {/* Header */}
         <div className="flex justify-between items-center p-6 border-b border-gray-100 dark:border-gray-700">
           <h2 className="text-xl font-bold text-gray-800 dark:text-white">
             Add Transaction
@@ -59,7 +54,6 @@ const TransactionModal = ({ isOpen, onClose }) => {
           </button>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -147,7 +141,6 @@ const TransactionModal = ({ isOpen, onClose }) => {
             </div>
           </div>
           <div className="pt-4">
-            {/* UPDATED: Dynamic button that reacts to isLoading */}
             <button
               type="submit"
               disabled={isLoading}

@@ -61,9 +61,7 @@ const Transactions = () => {
 
   return (
     <>
-      {/* 1. MAIN WRAPPER */}
       <div className="flex flex-col h-[calc(100vh-140px)] bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-4 md:p-6 transition-colors overflow-hidden">
-        {/* 2. HEADER SECTION */}
         <div className="flex flex-col gap-4 mb-4 shrink-0">
           <div className="flex justify-between items-center">
             <h2 className="text-xl font-bold text-gray-800 dark:text-white">
@@ -89,7 +87,6 @@ const Transactions = () => {
             </div>
           </div>
 
-          {/* 3. FILTER BAR */}
           <div className="flex flex-col xl:flex-row gap-3 p-3 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-100 dark:border-gray-700 shrink-0">
             <div className="relative flex-1">
               <Search
@@ -155,8 +152,6 @@ const Transactions = () => {
             </div>
           </div>
         </div>{" "}
-        {/* <-- THIS WAS THE MISSING CLOSING DIV FOR THE HEADER SECTION */}
-        {/* 4. SCROLLABLE TABLE AREA */}
         <div className="flex-1 overflow-y-auto rounded-lg border border-gray-200 dark:border-gray-700 relative">
           {isLoading && (
             <div className="absolute inset-0 bg-white/50 dark:bg-gray-900/50 backdrop-blur-[2px] z-20 flex flex-col items-center justify-center text-center">
